@@ -57,7 +57,7 @@
         background: #0056b3;
       }
       .login-container a {
-        color: #007bff;
+        color: white;
         text-decoration: none;
         display: block;
         text-align: center;
@@ -67,6 +67,27 @@
       .login-container a:hover {
         color: #0056b3;
       }
+      .tooltip {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background: yellow;
+        color: black;
+        padding: 10px 15px;
+        border-radius: 10px;
+        font-size: 14px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+      .tooltip::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        right: 15px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: red transparent transparent transparent;
+      }
     </style>
   </head>
   <body>
@@ -74,9 +95,10 @@
       <h1>Login</h1>
       <input type="email" placeholder="E-mail" />
       <input type="password" placeholder="Senha" />
-      <button>Entrar</button>
+      <button><a href="busca.html">Entrar</a></button>
       <a href="#">Esqueceu a senha?</a>
       <a href="#">Entrar como Convidado</a>
     </div>
+    <div class="tooltip">Aperte em Entrar</div>
   </body>
 </html>
